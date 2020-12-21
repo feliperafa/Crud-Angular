@@ -11,7 +11,7 @@ import { catchError, map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ProductService {
-  baseUrl = "https://backend-crud-exemple.herokuapp.com/";
+  baseUrl = "http://localhost:3001/products";
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
