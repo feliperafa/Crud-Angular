@@ -6,6 +6,9 @@ import { ProductCrudComponent } from './views/product-crud/product-crud.componen
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
+import { PokemonCrudComponent } from './views/pokemon-crud/pokemon-crud.component';
+import { PokemonReadComponent } from './components/pokemon/pokemon-read/pokemon-read.component';
+import { PokemonDetailComponent } from './components/pokemon/pokemon-detail/pokemon-detail.component';
 
 const routes: Routes = [{
 
@@ -23,6 +26,21 @@ const routes: Routes = [{
 },{
   path:"products/delete/:id",
   component: ProductDeleteComponent
+},{
+  path:"pokemon",
+  component: PokemonCrudComponent
+},{
+  path:"pokemon/read",
+  component: PokemonReadComponent
+},{
+  path:"pokemon/details/:id",
+  component: PokemonDetailComponent
+},{
+  path:"",
+  pathMatch:'full', redirectTo:""
+},{
+  path:"**",
+  pathMatch:'full', redirectTo:""
 }];
 
 @NgModule({

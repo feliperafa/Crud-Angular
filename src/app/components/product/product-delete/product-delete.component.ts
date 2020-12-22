@@ -24,7 +24,7 @@ product: Product
   }
 
   delete(): void {
-    this.productService.deleteNow(this.product.id).subscribe(() =>{
+    this.productService.deleteNow(this.product._id).subscribe(() =>{
     this.productService.exibir('Produto excluido com Sucesso!')
      this.router.navigate(['/products'])
     })
