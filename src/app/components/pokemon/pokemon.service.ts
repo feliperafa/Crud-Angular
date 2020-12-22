@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class PokemonService {
 
-  urlPokemon = environment.baseUrlPokemon;
+  urlPokemon =  "https://pokeapi.co/api/v2";
 
   constructor(private http: HttpClient) { }
 
