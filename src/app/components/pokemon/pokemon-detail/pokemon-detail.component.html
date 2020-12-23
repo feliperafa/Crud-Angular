@@ -1,19 +1,19 @@
 <mat-card class="example-card">
   <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Shiba Inu</mat-card-title>
-    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    <img mat-card-avatar class="header-image" src="{{pokemonImg}}" />
+    <mat-card-title>{{ pokemon.name }}</mat-card-title>
+    <mat-card-subtitle>Id {{ pokemon.id }}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+
+  <img mat-card-image src="{{ pokemonImg }}" alt="pokemon" />
+
   <mat-card-content>
-    <p>
-      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-      bred for hunting.
-    </p>
+    <mat-chip-list aria-label="Fish-selection">
+      <mat-chip color="primary" selected="primary">Type: {{pokemonType}}</mat-chip>
+      <mat-chip color="primary" selected="primary">Height: {{pokemon.height}}</mat-chip>
+      <mat-chip color="primary" selected="primary">Weight: {{pokemon.weight}}</mat-chip>
+      <mat-chip color="primary" selected="primary" (click)="back()">Volta Para Lista</mat-chip>
+
+    </mat-chip-list>
   </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
-  </mat-card-actions>
 </mat-card>

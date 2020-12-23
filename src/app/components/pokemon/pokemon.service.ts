@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
+
 
 
 @Injectable({
@@ -9,6 +9,8 @@ import { environment } from 'src/environments/environment';
 export class PokemonService {
 
   urlPokemon =  "https://pokeapi.co/api/v2";
+
+
 
   constructor(private http: HttpClient) { }
 

@@ -1,0 +1,38 @@
+
+.card
+{
+  width:300px;
+  margin:auto;
+  margin-top: 20px;
+  background-color: #bd3736;
+}
+.header-image{
+  background-size:cover;
+
+}
+.mat-card-header{
+background-color:white;
+padding-top: 10px;
+border-radius: 10px;
+}
+.mat-card-title{
+  text-transform: uppercase;
+  color:black;
+
+}
+.mat-card-subtitle{
+  color:black
+}
+.mat-chip{
+  background-color:black !important;
+}
+.mat-card-image{
+  display:flex;
+  margin:auto;
+  /* margin-bottom: 100px;
+  margin-top: 100px;
+  margin-right:100px;
+  margin-left: 100px ; */
+  width: 600px;
+  height: 500px;
+}

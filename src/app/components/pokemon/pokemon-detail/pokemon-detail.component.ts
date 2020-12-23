@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HeaderService } from '../../template/header/header.service';
 import { PokemonService } from '../pokemon.service';
 
@@ -10,7 +10,11 @@ import { PokemonService } from '../pokemon.service';
 })
 export class PokemonDetailComponent implements OnInit {
 
-  constructor(private pokemonService: PokemonService, private activatedRoute: ActivatedRoute, private headerService: HeaderService) {
+  pokemon: any = '';
+  pokemonType = [];
+  pokemonImg = '';
+
+  constructor(private router: Router ,private pokemonService: PokemonService, private activatedRoute: ActivatedRoute, private headerService: HeaderService) {
     headerService.headerDate = {
       title: 'Status Pokémons',
       icon: 'catching_pokemon',
@@ -28,12 +32,17 @@ export class PokemonDetailComponent implements OnInit {
   getPokemon(id) {
     this.pokemonService.listPokemon(id).subscribe(
       res => {
-        console.log(res)
+        this.pokemon = res;
+        this.pokemonImg = this.pokemon.sprites.front_default;
+        this.pokemonType = res.types[0].type.name;
 
       }, error => {
         console.log(error)
       }
     )
 
+  }
+  back(){
+    this.router.navigate(['/pokemon/read'])
   }
 }

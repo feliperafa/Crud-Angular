@@ -59,8 +59,8 @@ export class PokemonReadComponent implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
-  getRow(row){
-this.router.navigate([`pokemon/details/${row.posicao}`])
+  getRow(row) {
+    this.router.navigate([`pokemon/details/${row.posicao}`])
   }
 }
 
